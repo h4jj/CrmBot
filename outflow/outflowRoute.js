@@ -44,7 +44,7 @@ const createTicket = async (chatId, text = null) => {
             const embedContent = new EmbedBuilder()
                 .setColor(0x0099FF)
                 .setTitle(`${globalState.getName(chatId)}'s ${globalState.getTicketType(chatId)} ticket`)
-                .setAuthor({ name: 'Pepe\'s Ticketing System', iconURL: CONSTANTS.PEPE_ICON_URL })
+                .setAuthor({ name: 'MultiChat Ticketing System', iconURL: CONSTANTS.TICKET_ICON_URL })
                 .addFields(...fields)
                 .setImage(CONSTANTS.GROUP_ICON_URL)
                 .setTimestamp()

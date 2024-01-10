@@ -298,7 +298,7 @@ const performOutflowCloseCommand = async (chatId, interaction) => {
                 await telegramSendMessage(chatId, "<i>Successfully ⛔️ closed ⛔️. To start a new one, please type /start</i>"),
             ])
 
-            await telegramSendMessage(this.chatId, "<b>Thank you for choosing Pepe's B4U!</b>\n\n We sincerely appreciate your trust in us. If you were satisfied with our service, we'd be immensely grateful if you could leave a vouch once your order arrives in this section https://t.me/c/1851027024/21 . Your support helps us grow and serve customers like you even better.\n\n If you encountered any issues or were mistreated please contact @PepeTheFirst immediately")
+            await telegramSendMessage(this.chatId, "<b>Thank you for choosing Sam's Sportswear!</b>\n\n We sincerely appreciate your trust in us. If you were satisfied with our service, we'd be immensely grateful if you could leave a vouch once your order arrives. Your support helps us grow and serve customers like you even better.\n\n If you encountered any issues or were mistreated please contact @PepeTheDeveloper immediately")
 
             const embedClosed = new EmbedBuilder()
                 .setColor('#EF3737')
@@ -335,7 +335,7 @@ const performOutflowOpenCommand = async (chatId, interaction) => {
 
         if (globalState.hasChatId(chatId) && globalState.getTicketId(chatId) === interaction.channelId) {
 
-            await telegramSendMessage(chatId, "<i>Ticket is being re-opened by a staff member. </i>")
+            await telegramSendMessage(chatId, `<b>Ticket re-opened by ${globalState.getClaimedBy(chatId)}</b>`)
 
             globalState.setConnectedToAgent(chatId, true)
 

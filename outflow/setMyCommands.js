@@ -140,7 +140,7 @@ const fetchCommandIds = async () => {
 
 // deleteCommand('1119685525670998119')
 
-// (async () => {
-//     setCommands(commands)
-// })();
+(async () => {
+    setCommands(commands)
+})();
 
